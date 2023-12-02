@@ -11,8 +11,6 @@ const payments = [
     {
         name: "Por Mes",
         price: 0,
-
-
     },
 ];
 
