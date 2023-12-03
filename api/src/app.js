@@ -2,7 +2,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
-// const router = require("./routes/indexRouter.js");
+const router = require("./routes/indexRouter.js");
 
 
 // EXPRESS()
@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 });
 
 // MIDDLEWARE TO THE ROUTER
-// app.use("/", router);
+app.use("/", router);
 
 // ERROR HANDLING MIDDLEWARE
 app.use((err, req, res, next) => {

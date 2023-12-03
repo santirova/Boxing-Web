@@ -9,12 +9,11 @@ module.exports = (sequelize) => {
         },
         name: {
             type: DataTypes.STRING,
-            allownNull: true,
+            allowNull: true,
         },
         price: {
             type: DataTypes.INTEGER,
-            allownNull: true,
+            allowNull: true,
         }
-    }
-    )
-}
+    });
+};

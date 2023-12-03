@@ -1,11 +1,11 @@
-const payments = [
+const paymentsData = [
     {
         name: "Por Día",
-        price: "",
+        price: 0,
 
     }, {
         name: "Por Semana",
-        price: "",
+        price: 0,
 
     },
     {
@@ -15,5 +15,5 @@ const payments = [
 ];
 
 module.exports = {
-    payments
+    paymentsData
 };
