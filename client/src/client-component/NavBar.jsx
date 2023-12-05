@@ -13,7 +13,7 @@ function NavBar() {
       <nav>
         <ul className="nav__links">
           <li>
-            <NavLink to="Inicio" className="links">
+            <NavLink to="/" className="links">
               Inicio
             </NavLink>
           </li>
