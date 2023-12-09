@@ -1,5 +1,5 @@
 // paymentsHandlers.js
-const { getAllPaymentsController } = require("../controllers/paymetsController");
+const { getAllPaymentsController, getPaymentsById } = require("../controllers/paymetsController");
 
 const getPaymentsHandlers = async (req, res) => {
     try {
@@ -10,6 +10,27 @@ const getPaymentsHandlers = async (req, res) => {
     }
 };
 
+const getPaymentsByIdHandlers = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const payments = await getPaymentsById(id);
+        if (payments) {
+            res.status(200).json(payments);
+        } else {
+            res.status(404).json({
+                error: {
+                    message: "Payments not found",
+                    values: { id }
+                },
+            });
+        }
+    } catch (error) {
+        console.error('Error getting Payments by ID:', error);
+        res.status(500).json({ error: 'Error getting Payments by ID' });
+    }
+}
+
 module.exports = {
-    getPaymentsHandlers
+    getPaymentsHandlers,
+    getPaymentsByIdHandlers
 };
