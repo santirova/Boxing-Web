@@ -1,3 +1,4 @@
+
 // indexRouter.js
 const { Router } = require('express');
 const { Payments } = require('../db');
@@ -17,6 +18,7 @@ router.use('/api', async (req, res) => {
     } else {
         res.status(200).json("Abonos ya han sido cargados");
     }
+
 });
 
 module.exports = router;
