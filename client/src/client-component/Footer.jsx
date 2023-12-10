@@ -28,6 +28,7 @@ const Footer = () => {
           <div className="data-footer">
             <p>011-xxxx-xxxx</p>
             <p>diegonoriega@gmail.com</p>
+            <h4>Dirección</h4>
             <p>Arturo Guastavino 3750.</p>
             <p>Castelar sur, Bs As (CP:1712)</p>
           </div>
@@ -80,7 +81,7 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
               <a
-                className="fb-whatsapp"
+                className="wh-icon"
                 href="https://www.whatsapp.com/"
                 target="_blank"
                 rel="noopener noreferrer"

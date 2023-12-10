@@ -28,9 +28,19 @@
   font-weight: bold;
   font-size: 18px;
   margin: 15px;
+  position: relative;
 }
 
 .links:hover {
+  color: #da1d25;
+}
+
+.links:hover::after {
+  content: "•";
+  position: absolute;
+  bottom: -1em;
+  left: 50%;
+  transform: translateX(-50%);
   color: #da1d25;
 }
 
