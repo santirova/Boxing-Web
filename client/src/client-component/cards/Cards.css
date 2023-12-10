@@ -1,0 +1,27 @@
+.card-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 50px;
+  text-align: center;
+}
+
+.card {
+  font-size: 1em;
+}
+
+.card-firts {
+  color: red;
+}
+
+.card button {
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
