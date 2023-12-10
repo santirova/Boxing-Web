@@ -1,8 +1,9 @@
 footer {
   background-color: black;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
   padding: 8px;
   text-align: end;
+  padding: 10px;
 }
 
 footer h5 {
@@ -68,6 +69,7 @@ footer a {
 .links-footer {
   text-decoration: none;
   font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .container__footer {
@@ -89,6 +91,12 @@ footer a {
   gap: 10px;
 }
 
+.data-footer h4 {
+  margin-top: 10px;
+  color: #da1d25;
+  text-transform: uppercase;
+}
+
 .redes-footer {
   display: flex;
   flex-direction: column;
@@ -98,6 +106,12 @@ footer a {
 .icons-redes {
   text-align: center;
   margin-top: 10px;
+}
+
+.ig-icon,
+.fb-icon,
+.wh-icon {
+  color: #da1d25;
 }
 
 .copy-name {
