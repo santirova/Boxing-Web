@@ -1,0 +1,46 @@
+.container__nav {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    img {
+      width: 80px;
+      border-radius: 50%;
+      margin: 10px 20px;
+    }
+  }
+  .nav__links {
+    display: flex;
+    justify-content: center;
+    li {
+      .links {
+        color: $colorTextOne;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: $sizeLinks;
+        margin: 15px;
+        position: relative;
+
+        &:hover {
+          color: $colorMain;
+
+          &:hover::after {
+            content: "•";
+            position: absolute;
+            bottom: -1em;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $colorMain;
+          }
+        }
+      }
+    }
+  }
+  .login {
+    background-color: $colorMain;
+    padding: 8px 30px;
+    color: $colorTextOne;
+    margin-right: 20px;
+  }
+}
