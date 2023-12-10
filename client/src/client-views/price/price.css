@@ -1,0 +1,17 @@
+.card {
+  display: grid;
+  gap: 30px; /* Espacio entre las cards */
+}
+
+.price__container h1 {
+  background-color: rgb(31, 30, 30);
+  padding: 40px;
+  text-align: center;
+  color: white;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #da1d25;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 15px;
+}
