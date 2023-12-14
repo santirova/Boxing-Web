@@ -1,8 +1,7 @@
-import "./home.css";
 import { Link } from "react-router-dom";
-import img1 from "../../assets/box.jpg";
-import img2 from "../../assets/box-dos.jpg";
-import img3 from "../../assets/box-tres.jpg";
+import img1 from "../assets/box.jpg";
+import img2 from "../assets/box-dos.jpg";
+import img3 from "../assets/box-tres.jpg";
 
 const images = [
   {
