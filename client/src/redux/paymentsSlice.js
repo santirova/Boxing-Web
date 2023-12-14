@@ -4,16 +4,23 @@ const initialState = {
     allPayments: [],
     paymentsDetail: null,
 };
-
-export const paymentsSlice = createSlice({
+console.log("Estado inicial => ", initialState.allPayments);
+console.log("paymemtsDetail => ", initialState.paymentsDetail)
+const paymentsSlice = createSlice({
     name: "payments",
     initialState,
     reducers: {
         getAllPayments: (state, action) => {
-            state.allPayments = action.payload;
+
+            const allPayments = action.payload;
+            state.allPayments = allPayments
         },
         getPaymentsDetail: (state, action) => {
             state.paymentsDetail = action.payload;
-        }
-    }
+        },
+    },
 });
+
+export const { getAllPayments, getPaymentsDetail } = paymentsSlice.actions;
+
+export default paymentsSlice.reducer;

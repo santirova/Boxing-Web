@@ -1,6 +1,7 @@
 // paymentsHandlers.js
 const { getAllPaymentsController } = require("../controllers/paymentsController/getAllPaymentsController");
 const { getPaymentsById } = require("../controllers/paymentsController/getPaymentsById.js")
+
 const getPaymentsHandlers = async (req, res) => {
     try {
         const allPayments = await getAllPaymentsController();
