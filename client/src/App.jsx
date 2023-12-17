@@ -2,8 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./client-component/NavBar";
 import NavBar from "./client-component/NavBar";
 import Home from "./client-views/home";
+import About from "./client-views/about";
 import Price from "./client-views/price/price";
 import Footer from "./client-component/Footer";
+import Trainning from "./client-views/trainning";
+import Contact from "./client-views/contact";
 
 function App() {
   return (
@@ -12,7 +15,10 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Nosotros" element={<About />} />
+          <Route path="/Entrenamiento" element={<Trainning />} />
           <Route path="/Precios" element={<Price />} />
+          <Route path="/Contacto" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>
