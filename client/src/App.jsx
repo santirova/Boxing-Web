@@ -8,6 +8,7 @@ import Footer from "./client-component/Footer";
 import Trainning from "./client-views/trainning";
 import Contact from "./client-views/contact";
 
+
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Entrenamiento" element={<Trainning />} />
           <Route path="/Precios" element={<Price />} />
           <Route path="/Contacto" element={<Contact />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>

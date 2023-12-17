@@ -10,6 +10,7 @@ const ApiCard = () => {
         {allPayments.map((item) => (
           <div key={item.id} className="card">
             <p className="card-firts">1° clase gratis</p>
+            <h1>{item.id}</h1>
             <h2>{item.name}</h2>
             <p>{item.price}</p>
             <p>{item.description}</p>
