@@ -25,6 +25,7 @@ export const fetchDetailPayments = (id) => async (dispatch) => {
 
         const response = await axios.get(`/payments/${id}`);
         const detailPayments = response.data;
+        console.log("detalle => ", detailPayments);
         dispatch(getPaymentsDetail(detailPayments));
     } catch (error) {
         console.log(error);
