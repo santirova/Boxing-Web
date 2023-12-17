@@ -1,0 +1,97 @@
+footer {
+  background-color: black;
+  color: $colorTextTwo;
+  padding: 20px;
+  .container__footer {
+    display: flex;
+    justify-content: space-between;
+    .data__footer {
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+      gap: 10px;
+      h4 {
+        font-size: 1.3em;
+        margin-top: 10px;
+        color: #da1d25;
+        text-transform: uppercase;
+      }
+      p {
+        margin-top: 4px;
+        font-size: 1em;
+      }
+    }
+    .nav__footer {
+      display: flex;
+      align-items: center;
+      .footer__links {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .links__footer {
+          text-decoration: none;
+          font-size: 1.2em;
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+    .redes__footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h4 {
+        font-size: 1.3em;
+        margin-top: 10px;
+        color: #da1d25;
+        text-transform: uppercase;
+      }
+      .icons__redes {
+        text-align: center;
+        margin-top: 10px;
+        color: #da1d25;
+        a {
+          margin: 0 8px;
+          color: $colorTextTwo;
+          font-size: 1.5em;
+        }
+      }
+    }
+    .newsletter {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 5px;
+      margin-right: 30px;
+      h5 {
+        font-size: 1.1em;
+        margin-top: 10px;
+        text-transform: uppercase;
+      }
+      input {
+        background-color: rgb(44, 44, 44);
+        padding: 8px 30px;
+        margin-top: 5px;
+        color: rgb(139, 139, 139);
+        font-weight: bold;
+        margin-right: 20px;
+        border: none;
+      }
+
+      button {
+        background-color: #da1d25;
+        padding: 8px 30px;
+        color: white;
+        font-weight: bold;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .separador {
+    border-top: 1px solid rgb(139, 139, 139);
+    margin: 15px 150px;
+  }
+  .copy__name {
+    text-align: center;
+  }
+}

@@ -1,4 +1,3 @@
-import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -11,9 +10,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   const [email, setEmail] = useState("");
 
-  const handleInputChange = (e) => {
-    setEmail(e.target.value);
-  };
+  const handleInputChange = (e) => setEmail(e.target.value);
 
   const handleSubscribe = () => {
     console.log(
@@ -21,92 +18,71 @@ const Footer = () => {
     );
   };
 
+  const links = [
+    { to: "/", label: "Inicio" },
+    { to: "Nosotros", label: "Nosotros" },
+    { to: "Entrenamiento", label: "Entrenamiento" },
+    { to: "Precios", label: "Precios" },
+    { to: "Contacto", label: "Contacto" },
+  ];
+
   return (
-    <footer>
-      <>
-        <div className="container__footer">
-          <div className="data-footer">
-            <p>011-xxxx-xxxx</p>
-            <p>diegonoriega@gmail.com</p>
-            <h4>Dirección</h4>
-            <p>Arturo Guastavino 3750.</p>
-            <p>Castelar sur, Bs As (CP:1712)</p>
-          </div>
-          <nav className="nav-footer">
-            <ul className="footer__links">
-              <li>
-                <NavLink to="/" className="links-footer">
-                  Inicio
+    <footer className="footer">
+      <section className="container__footer">
+        <div className="data__footer">
+          <p>011-xxxx-xxxx</p>
+          <p>diegonoriega@gmail.com</p>
+          <h4>Dirección</h4>
+          <p>Arturo Guastavino 3750.</p>
+          <p>Castelar sur, Bs As (CP:1712)</p>
+        </div>
+        <nav className="nav__footer">
+          <ul className="footer__links">
+            {links.map((link, index) => (
+              <li key={index}>
+                <NavLink to={link.to} className="links__footer">
+                  {link.label}
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="Nosotros" className="links-footer">
-                  Nosotros
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="Entrenamiento" className="links-footer">
-                  Entrenamiento
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="Precios" className="links-footer">
-                  Precios
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="Contacto" className="links-footer">
-                  Contacto
-                </NavLink>
-              </li>
-            </ul>
-          </nav>
-          <div className="redes-footer">
-            <h4>Redes sociales</h4>
-            <div className="icons-redes">
+            ))}
+          </ul>
+        </nav>
+        <div className="redes__footer">
+          <h4>Redes sociales</h4>
+          <div className="icons__redes">
+            {[
+              { href: "https://www.instagram.com/", icon: faInstagram },
+              { href: "https://www.facebook.com/", icon: faFacebook },
+              { href: "https://www.whatsapp.com/", icon: faWhatsapp },
+            ].map((social, index) => (
               <a
-                className="ig-icon"
-                href="https://www.instagram.com/"
+                key={index}
+                className={`${social.icon.iconName}-icon`}
+                href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faInstagram} />
+                <FontAwesomeIcon icon={social.icon} />
               </a>
-              <a
-                className="fb-icon"
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faFacebook} />
-              </a>
-              <a
-                className="wh-icon"
-                href="https://www.whatsapp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faWhatsapp} />
-              </a>
-            </div>
-          </div>
-          <div className="newsletter">
-            <h5>Suscribite</h5>
-            <p>Y recibí todas las promociones disponibles</p>
-            <input
-              type="email"
-              placeholder="Ingresa tu correo electrónico"
-              value={email}
-              onChange={handleInputChange}
-            />
-            <button onClick={handleSubscribe}>Suscribirse</button>
+            ))}
           </div>
         </div>
-        <div className="separador"></div>
-        <p className="copy-name">
-          &copy; {new Date().getFullYear()} Diego Noriega
-        </p>
-      </>
+        <div className="newsletter">
+          <h5>Suscribite</h5>
+          <p>Y recibí todas las promociones disponibles</p>
+          <input
+            type="email"
+            placeholder="Ingresa tu correo electrónico"
+            value={email}
+            onChange={handleInputChange}
+          />
+          <button onClick={handleSubscribe}>Suscribirse</button>
+        </div>
+      </section>
+      <div className="separador"></div>
+      <p className="copy__name">
+        &copy; {new Date().getFullYear()} Diego Noriega
+      </p>
     </footer>
   );
 };

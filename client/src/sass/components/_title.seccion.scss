@@ -1,0 +1,26 @@
+.title__section {
+  text-align: center;
+  background-color: #111111;
+  padding: 80px;
+  h1 {
+    color: #da1d25;
+    font-size: 2.3em;
+  }
+  p {
+    color: #f3eeee;
+    padding: 30px;
+  }
+  .subtitle__section {
+    display: inline-block;
+    h6 {
+      background-color: #da1d25;
+      color: #f3eeee;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      margin-top: 20px;
+      span {
+        color: black;
+      }
+    }
+  }
+}
