@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     allPayments: [],
-    paymentsDetail: null,
+    paymentsDetail: [],
 };
 console.log("Estado inicial => ", initialState.allPayments);
 console.log("paymemtsDetail => ", initialState.paymentsDetail)
@@ -17,6 +17,7 @@ const paymentsSlice = createSlice({
         },
         getPaymentsDetail: (state, action) => {
             state.paymentsDetail = action.payload;
+            console.log(state);
         },
     },
 });

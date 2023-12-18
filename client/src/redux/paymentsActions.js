@@ -22,7 +22,7 @@ export const getPayments = () => async (dispatch) => {
 
 export const fetchDetailPayments = (id) => async (dispatch) => {
     try {
-
+        console.log(id);
         const response = await axios.get(`/payments/${id}`);
         const detailPayments = response.data;
         console.log("detalle => ", detailPayments);

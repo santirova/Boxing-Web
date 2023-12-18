@@ -12,8 +12,6 @@ const Price = () => {
   useEffect(() => {
     if (!allPayments.length) {
       axios.get("/api").then(() => dispatch(getPayments()));
-    } else {
-      dispatch(getPayments());
     }
   }, [dispatch, allPayments]);
 
