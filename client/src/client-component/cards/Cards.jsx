@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import "./Cards.css";
+import { Link } from "react-router-dom";
 
 const ApiCard = () => {
   const allPayments = useSelector((state) => state.paymentsReducer.allPayments);
@@ -14,7 +15,9 @@ const ApiCard = () => {
             <h2>{item.name}</h2>
             <p>{item.price}</p>
             <p>{item.description}</p>
-            <button>Ver Detalle</button>
+            <Link to={`/Detalle/${item.id}`}>
+              <button>Ver Detalle</button>
+            </Link>
           </div>
         ))}
       </div>

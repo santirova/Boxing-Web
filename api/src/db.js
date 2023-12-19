@@ -1,6 +1,9 @@
 require('dotenv').config();
 const { Sequelize } = require('sequelize');
-const PaymentsFunction = require('./models/payments.js')
+const PaymentsFunction = require('./models/payments.js');
+const OrderFunction = require('./models/order.js');
+const UserFunction = require('./models/user.js');
+const ItemFunction = require('./models/item.js');
 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_PORT } = process.env;
 
@@ -10,11 +13,17 @@ const sequelize = new Sequelize(
 );
 
 PaymentsFunction(sequelize);
+OrderFunction(sequelize);
+UserFunction(sequelize);
+ItemFunction(sequelize);
 
-const { Payments } = sequelize.models;
+const { Payments, Order, User, Item } = sequelize.models;
 
 module.exports = {
     sequelize,
+    Order,
     Payments,
+    User,
+    Item,
     ...sequelize.models,
 };
