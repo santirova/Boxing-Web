@@ -7,9 +7,17 @@ module.exports = (sequelize) => {
             defaultValue: DataTypes.UUIDV4,
             primaryKey: true
         },
-        name: {
-            type: DataTypes.STRING,
-            allownNull: false,
+        quantity: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        final_price: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        },
+        amount: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
         }
     })
 }

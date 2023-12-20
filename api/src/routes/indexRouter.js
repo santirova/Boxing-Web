@@ -3,11 +3,14 @@
 const { Router } = require('express');
 const { Payments } = require('../db');
 const { paymentsData } = require('../../api');
-const paymentsRouter = require("./paymentsRouter");
+const paymentsRouter = require('./paymentsRouter');
+const userRouter = require('./userRouter');
 
 const router = Router();
 
 router.use('/payments', paymentsRouter);
+
+router.use('/user', userRouter);
 
 router.use('/api', async (req, res) => {
     const allPayments = await Payments.findAll();
