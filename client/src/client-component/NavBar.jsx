@@ -1,7 +1,10 @@
 import { NavLink, Link } from "react-router-dom";
 import Logo from "../assets/22.jpg";
-
+import { useAuth0 } from "@auth0/auth0-react";
+import LoginButton from "../loginComponent/loginButton/loginButton";
+import LogoutButton from "../loginComponent/logOutButton/logOutButton";
 function NavBar() {
+  const { isAuthenticated } = useAuth0();
   return (
     <div className="container__nav">
       <div className="logo">
@@ -37,10 +40,17 @@ function NavBar() {
             </NavLink>
           </li>
         </ul>
+        {isAuthenticated && (
+          <div>
+            <LogoutButton />
+          </div>
+        )}
+        {!isAuthenticated && (
+          <div>
+            <LoginButton />
+          </div>
+        )}
       </nav>
-      <Link to="/">
-        <button className="login">Login</button>
-      </Link>
     </div>
   );
 }
