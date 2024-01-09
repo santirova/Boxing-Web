@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import img1 from "../assets/box.jpg";
 import img2 from "../assets/box-dos.jpg";
 import img3 from "../assets/box-tres.jpg";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useEffect } from "react";
+import axios from "axios";
 
 const images = [
   {
@@ -13,6 +16,27 @@ const images = [
 ];
 
 const Home = () => {
+  const { isLoading, user, isAuthenticated } = useAuth0();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      const body = {
+        name: user?.name,
+        email: user?.email,
+      };
+      axios
+        .post("/user", body)
+        .then((response) => {
+          // Manejar la respuesta si es necesario
+          console.log("Post request successful", response.data);
+        })
+        .catch((error) => {
+          // Manejar el error si ocurre
+          console.error("Error in post request", error);
+        });
+    }
+  }, [isAuthenticated, user]);
+
   return (
     <>
       <div className="home__container">
