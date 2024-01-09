@@ -1,0 +1,16 @@
+.button {
+  position: relative;
+  padding: 10px 20px;
+  color: #ffff;
+  background-color: #da1d25;
+  border: none;
+  cursor: pointer;
+  border: 3px groove #da1d25;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
