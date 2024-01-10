@@ -16,7 +16,7 @@ const images = [
 ];
 
 const Home = () => {
-  const { isLoading, user, isAuthenticated } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -27,11 +27,9 @@ const Home = () => {
       axios
         .post("/user", body)
         .then((response) => {
-          // Manejar la respuesta si es necesario
           console.log("Post request successful", response.data);
         })
         .catch((error) => {
-          // Manejar el error si ocurre
           console.error("Error in post request", error);
         });
     }

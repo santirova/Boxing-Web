@@ -40,17 +40,17 @@ function NavBar() {
             </NavLink>
           </li>
         </ul>
-        {isAuthenticated && (
-          <div>
-            <LogoutButton />
-          </div>
-        )}
-        {!isAuthenticated && (
-          <div>
-            <LoginButton />
-          </div>
-        )}
       </nav>
+      {isAuthenticated && (
+        <div>
+          <LogoutButton />
+        </div>
+      )}
+      {!isAuthenticated && (
+        <div>
+          <LoginButton />
+        </div>
+      )}
     </div>
   );
 }
