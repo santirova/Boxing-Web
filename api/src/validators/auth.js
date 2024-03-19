@@ -21,6 +21,11 @@ const validatorRegister = [
     check('type')
         .optional(),
 
+    check('password')
+        .exists().withMessage("La contraseña es obligatoria")
+        .notEmpty().withMessage("La contraseña no puede estar vacía")
+        .isLength({ min: 3, max: 15 }).withMessage("La contraseña debe tener minimo 3 caracteres y maximo 15"),
+
 
     (req, res, next) => {
         return validateResults(req, res, next);
