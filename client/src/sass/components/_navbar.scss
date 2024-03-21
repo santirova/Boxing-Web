@@ -5,8 +5,7 @@
   justify-content: space-between;
   .logo {
     img {
-      width: 80px;
-      border-radius: 50%;
+      width: 100px;
       margin: 10px 20px;
     }
   }
@@ -39,8 +38,7 @@
   }
   .login {
     background-color: $colorMain;
-    padding: 8px 30px;
+    padding: 7px 25px;
     color: $colorTextOne;
-    margin-right: 20px;
   }
 }
