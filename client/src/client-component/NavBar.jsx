@@ -1,5 +1,5 @@
-import { NavLink, Link } from "react-router-dom";
-import Logo from "../assets/22.jpg";
+import { NavLink } from "react-router-dom";
+import Logo from "../assets/box-logo.png";
 import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "../loginComponent/loginButton/loginButton";
 import LogoutButton from "../loginComponent/logOutButton/logOutButton";
