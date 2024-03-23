@@ -9,7 +9,7 @@ const router = Router();
 
 router.use("/payments", paymentsRouter);
 
-router.use("/user", userRouter);
+router.use("/auth0", userRouter);
 
 router.use("/api", async (req, res) => {
   const allPayments = await Payments.findAll();
