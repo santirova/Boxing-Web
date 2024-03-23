@@ -1,4 +1,5 @@
 const { User } = require("../../db");
+const { tokenSign } = require('../../utils/handleJsonWebToken');
 
 const postUserController = async (name, email, type, status) => {
     let newUser = {};
@@ -17,7 +18,8 @@ const postUserController = async (name, email, type, status) => {
             newUser = await User.create({ name, email, type, status });
         }
     }
-    return newUser.dataValues;
+    const token = await tokenSign(newUser);
+    return { token, user: newUser };
 
 }
 

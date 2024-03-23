@@ -7,11 +7,9 @@ const encrypt = async (passwordplain) => {
     return hash
 };
 
-
 const compare = async (passwordplain, hashPassword) => {
-
     return await bcryptjs.compare(passwordplain, hashPassword)
-}
+};
 
 
 

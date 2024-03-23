@@ -1,5 +1,5 @@
-const getUserController = require('../controllers/userController/getUserController.js');
-const postUserController = require('../controllers/userController/postUserController.js');
+const getUserController = require('../controllers/auth0Controller/getUserController.js');
+const postUserController = require('../controllers/auth0Controller/postUserController.js');
 
 const getUserHandler = async (req, res) => {
     try {
