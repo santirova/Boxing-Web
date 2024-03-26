@@ -25,7 +25,7 @@ const Home = () => {
         email: user?.email,
       };
       axios
-        .post("/user", body)
+        .post("/auth0", body)
         .then((response) => {
           console.log("Post request successful", response.data);
         })
