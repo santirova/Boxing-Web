@@ -5,6 +5,12 @@ const { encrypt } = require('../../utils/handlePassword');
 const registerLocalController = async (req, res) => {
     const { name, email, type, status, password: plainPassword } = req.body;
     try {
+
+        const existingUser = await User.findOne({ where: { email: email } });
+        if (existingUser) {
+            return res.status(400).json({ error: 'El usuario ya existe' });
+        }
+
         const encryptedPassword = await encrypt(plainPassword);
 
         const newUser = await User.create({ name, email, type, status, password: encryptedPassword });
