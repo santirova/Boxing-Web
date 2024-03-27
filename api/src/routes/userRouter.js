@@ -2,8 +2,9 @@ const { Router } = require("express");
 const { getUserHandler } = require("../handlers/userHandlers");
 const { postUserHandler } = require("../handlers/userHandlers");
 
-const auth0Router = Router();
+const userRouter = Router();
 
-auth0Router.get("/", getUserHandler);
-auth0Router.post("/", postUserHandler);
-module.exports = auth0Router;
+userRouter.get("/", getUserHandler);
+userRouter.post("/", postUserHandler);
+
+module.exports = userRouter;
