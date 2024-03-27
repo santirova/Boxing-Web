@@ -3,13 +3,19 @@ const { Router } = require("express");
 const { Payments } = require("../db");
 const { paymentsData } = require("../../api");
 const paymentsRouter = require("./paymentsRouter");
-const userRouter = require("./userRouter");
+const auth0Router = require("./auth0Router");
+const registerLocalRouter = require('./registerLocalRouter');
+const localLoginRouter = require('./localLoginRouter');
 
 const router = Router();
 
 router.use("/payments", paymentsRouter);
 
-router.use("/auth0", userRouter);
+router.use("/auth0", auth0Router);
+
+router.use('/register', registerLocalRouter);
+
+router.use('/login', localLoginRouter);
 
 router.use("/api", async (req, res) => {
   const allPayments = await Payments.findAll();

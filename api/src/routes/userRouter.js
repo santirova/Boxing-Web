@@ -6,4 +6,5 @@ const userRouter = Router();
 
 userRouter.get("/", getUserHandler);
 userRouter.post("/", postUserHandler);
+
 module.exports = userRouter;
