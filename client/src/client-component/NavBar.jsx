@@ -1,57 +1,65 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { useState } from "react";
 import Logo from "../assets/box-logo.png";
+import MobileNav from "./MobileNav";
 import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "../loginComponent/loginButton/loginButton";
 import LogoutButton from "../loginComponent/logOutButton/logOutButton";
+
 function NavBar() {
   const { isAuthenticated } = useAuth0();
+
+  const NavLinks = [
+    { to: "/", label: "Inicio" },
+    { to: "/Nosotros", label: "Nosotros" },
+    { to: "/Entrenamiento", label: "Entrenamiento" },
+    { to: "/Precios", label: "Precios" },
+    { to: "/Contacto", label: "Contacto" },
+  ];
+
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
+
   return (
-    <div className="container__nav">
-      <div className="logo">
-        <NavLink to="/">
-          <img src={Logo} alt="Logo Boxeo" />
-        </NavLink>
-      </div>
-      <nav>
-        <ul className="nav__links">
-          <li>
-            <NavLink to="/" className="links">
-              Inicio
+    <>
+      <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
+      <nav className="nav-wrapper">
+        <div className="nav-content">
+          <div className="logo">
+            <NavLink to="/">
+              <img src={Logo} alt="Logo Boxeo" />
             </NavLink>
-          </li>
-          <li>
-            <NavLink to="Nosotros" className="links">
-              Nosotros
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="Entrenamiento" className="links">
-              Entrenamiento
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="Precios" className="links">
-              Precios
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="Contacto" className="links">
-              Contacto
-            </NavLink>
-          </li>
-        </ul>
+          </div>
+          <ul className="nav-links">
+            {NavLinks.map((link, index) => (
+              <li className="navlinks-li" key={index}>
+                <Link to={link.to} className="links">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <button className="menu-btn" onClick={toggleMenu}>
+            <span style={{ fontSize: "1.4rem" }}>
+              {openMenu ? <span style={{ marginTop: "7px" }}>X</span> : "☰"}
+            </span>
+          </button>
+          {isAuthenticated && (
+            <div className="boton-register">
+              <LogoutButton />
+            </div>
+          )}
+          {!isAuthenticated && (
+            <div className="boton-register">
+              <LoginButton />
+            </div>
+          )}
+        </div>
       </nav>
-      {isAuthenticated && (
-        <div>
-          <LogoutButton />
-        </div>
-      )}
-      {!isAuthenticated && (
-        <div>
-          <LoginButton />
-        </div>
-      )}
-    </div>
+    </>
   );
 }
 
