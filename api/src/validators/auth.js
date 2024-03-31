@@ -1,27 +1,20 @@
-const { check } = require('express-validator');
-const validateResults = require('../middleware/validatorMiddleware.js');
-const User = require('../models/user.js');
+const { check } = require("express-validator");
+const validateResults = require("../middleware/validatorMiddleware.js");
+
 
 const validatorRegister = [
     check("name")
         .exists().withMessage("El nombre es obligatorio")
         .notEmpty().withMessage("El nombre no puede estar vacío")
         .isLength({ min: 3, max: 99 }).withMessage("El nombre debe tener entre 3 y 99 caracteres"),
-    check('email')
+    check("email")
         .exists().withMessage("El correo electrónico es obligatorio")
         .notEmpty().withMessage("El correo electrónico no puede estar vacío")
-        .isEmail().withMessage("Debe proporcionar una dirección de correo electrónico válida")
-        .custom(async (value) => {
-
-            const user = await User.findOne({ where: { email: value } });
-            if (user) {
-                throw new Error("El correo electrónico ya está en uso");
-            }
-        }),
-    check('type')
+        .isEmail().withMessage("Debe proporcionar una dirección de correo electrónico válida"),
+    check("type")
         .optional(),
 
-    check('password')
+    check("password")
         .exists().withMessage("La contraseña es obligatoria")
         .notEmpty().withMessage("La contraseña no puede estar vacía")
         .isLength({ min: 3, max: 15 }).withMessage("La contraseña debe tener minimo 3 caracteres y maximo 15"),
@@ -32,4 +25,21 @@ const validatorRegister = [
     }
 ];
 
-module.exports = { validatorRegister };
+const validatorLogin = [
+
+    check('password')
+        .exists()
+        .notEmpty()
+        .isLength({ min: 3, max: 15 }),
+    check('email')
+        .exists()
+        .notEmpty()
+        .isEmail(),
+
+    (req, res, next) => {
+        return validateResults(req, res, next);
+    }
+];
+
+
+module.exports = { validatorRegister, validatorLogin };
