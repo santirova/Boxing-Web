@@ -1,89 +1,152 @@
 .home__container {
   background-image: url(../../../src/assets/fondo-box.jpg);
-  background-size: cover;
-  background-position-y: 50%;
-  padding: 8.1em 5em;
-  h1 {
-    display: flex;
-    flex-direction: column;
-    .s1 {
-      font-size: 2em;
-      color: $colorMain;
-      animation: fadeInLeft 0.7s forwards;
-    }
-    .s2 {
-      font-size: 2.3em;
-      color: $colorTextOne;
-      transform: translateX(-50%);
-      animation: fadeInLeft 0.7s forwards;
-      animation-delay: 0.5s;
-      .s3 {
-        text-decoration: underline;
-        text-decoration-color: $colorMain;
-        text-decoration-thickness: 5px;
-        text-underline-offset: 20px;
+  background-size: 110%;
+  background-position-y: -11vw;
+  padding: 12vw 5vw;
+  .title__container {
+    font-family: "Teko", sans-serif;
+    h1 {
+      display: flex;
+      flex-direction: column;
+      line-height: 6vw;
+      .s1 {
+        font-size: 5.5vw;
+        text-transform: uppercase;
+        color: $colorMain;
+        animation: fadeInLeft 0.7s forwards;
+      }
+      .s2 {
+        font-size: 6.8vw;
+        text-transform: uppercase;
+        color: $colorTextOne;
+        transform: translateX(-50%);
+        animation: fadeInLeft 0.8s forwards;
+        animation-delay: 0.5s;
       }
     }
-  }
-  p {
-    color: $colorTextOne;
-    font-size: 1.3em;
-    line-height: 0.3em;
-    margin-top: 30px;
-    transform: translateX(-100%);
-    animation: fadeInLeft 0.7s forwards;
-    animation-delay: 0.9s;
-  }
-  .btn-home {
-    background-color: $colorMain;
-    padding: 12px 35px;
-    color: white;
-    margin-right: 20px;
-    margin-top: 30px;
-    &:hover {
-      background-color: $colorTextOne;
-      color: $colorMain;
+    p {
+      font-family: "Poppins", sans-serif;
+      color: $colorTextOne;
+      font-size: 1.3vw;
+      line-height: 1.2vw;
+      margin-top: 1vw;
+      transform: translateX(-100%);
+      animation: fadeInLeft 0.7s forwards;
+      animation-delay: 0.9s;
+    }
+    .btn-home {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.2vw;
+      background-color: $colorMain;
+      color: white;
+      padding: 1vw 2.5vw;
+      margin-top: 2.5vw;
+      &:hover {
+        background-color: $colorTextOne;
+        color: $colorMain;
+        transform: translateY(-8px);
+        transition: transform 0.3s ease;
+      }
+      &:not(:hover) {
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+      }
     }
   }
 }
 .subhome__container {
-  background-color: $colorSubHome;
-  padding: 30px;
-  h2 {
+  background-color: black;
+  padding: 2vw 8vw;
+  .second__container {
     text-align: center;
-    color: $colorTextOne;
-    font-size: $sizeSubTitle;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-  }
-  .linea {
-    @include lineaSeparadora;
-  }
-  .img__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    img {
-      width: 100%;
+    h2 {
+      font-family: "Teko", sans-serif;
+      text-transform: uppercase;
+      color: $colorTextOne;
+      font-size: 2.8vw;
+      font-weight: 600;
     }
-    .img-subhome {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      p {
-        position: relative;
-        width: 170px;
-        height: 50px;
-        padding: 20px;
-        border: 2px solid $colorBorders;
-        background: #000000;
-        color: $colorTextTwo;
-        font-size: 15px;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        margin-top: -40px;
+    .linea {
+      @include lineaSeparadora;
+    }
+    .img__container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5vw;
+      img {
+        width: 100%;
+      }
+      .img-subhome {
         display: flex;
+        flex-direction: column;
         align-items: center;
+        margin-top: 2vw;
+        p {
+          position: relative;
+          font-family: "Poppins", sans-serif;
+          font-weight: 500;
+          width: 13.5vw;
+          height: 2.5vw;
+          padding: 3vw;
+          border: 0.1vw solid $colorBorders;
+          background: #000000;
+          color: $colorTextTwo;
+          font-size: 1.1vw;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          margin-top: -40px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+.benefits__container {
+  background-color: #080808;
+  padding: 2vw 1vw;
+  text-align: center;
+  .third__title {
+    h3 {
+      font-family: "Teko", sans-serif;
+      text-transform: uppercase;
+      color: $colorTextOne;
+      font-size: 2.8vw;
+      font-weight: 600;
+    }
+    .linea {
+      border-top: 0.3vw solid $colorMain;
+      margin: 0.1vw 46vw;
+    }
+    .benefits-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 2vw;
+      padding: 2vw 5vw;
+      .benefit {
+        border: 0.1vw solid gray;
+        padding: 2.5vw 1vw;
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 0.8s ease;
+          background-color: #0f0f0f;
+        }
+        h4 {
+          font-family: "Teko", sans-serif;
+          font-size: 1.8vw;
+          font-weight: 500;
+          color: #9e9d9d;
+          margin-top: 1vw;
+          &:hover {
+            color: $colorMain;
+          }
+        }
+        p {
+          color: $colorTextTwo;
+          font-weight: 500;
+          font-family: "Poppins", sans-serif;
+          font-size: 1.1vw;
+          margin-top: 1vw;
+        }
       }
     }
   }

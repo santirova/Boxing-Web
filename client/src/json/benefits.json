@@ -1,0 +1,22 @@
+[
+  {
+    "name": "QUEMA DE GRASA / TONO MUSCULAR INCREMENTADO",
+    "description": "Uno de los principales beneficios del boxeo es que puede quemar hasta 500 calorías.",
+    "img": "/src/assets/icon-01.jpg"
+  },
+  {
+    "name": "ENTRENAMIENTO DE CUERPO COMPLETO",
+    "description": "El boxeo implica el movimiento de muchas partes del cuerpo, como piernas y caderas.",
+    "img": "/src/assets/icon-02.jpg"
+  },
+  {
+    "name": "ALIVIO DEL ESTRÉS Y AUMENTO DE LA CONFIANZA",
+    "description": "El boxeo no solo te ayudará a ponerte en forma, sino que también mejorará tu confianza.",
+    "img": "/src/assets/icon-03.jpg"
+  },
+  {
+    "name": "CONSTRUCCIÓN DE HUESOS FUERTES",
+    "description": "El boxeo implica mucha resistencia tanto del equipo como de la estructura ósea.",
+    "img": "/src/assets/icon-04.jpg"
+  }
+]
