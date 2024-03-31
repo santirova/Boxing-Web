@@ -1,8 +1,9 @@
 const express = require('express');
 const registerLocalRouter = express.Router();
-const registerLocalController = require('../controllers/registerLocalController/registerLocalController.js')
+const registerLocalHandler = require("../handlers/registerLocalHandlers.js");
+const { validatorRegister } = require("../validators/auth.js");
 
-registerLocalRouter.post('/', registerLocalController);
+registerLocalRouter.post('/', validatorRegister, registerLocalHandler);
 
 
 module.exports = registerLocalRouter;

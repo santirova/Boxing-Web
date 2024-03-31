@@ -1,7 +1,8 @@
 const express = require('express');
 const localLoginRouter = express.Router();
-const localLoginController = require('../controllers/registerLocalController/loginLocalController');
+const loginLocalHandler = require("../handlers/loginLocalHanlder.js");
+const { validatorLogin } = require("../validators/auth.js");
 
-localLoginRouter.post('/', localLoginController);
+localLoginRouter.post('/', validatorLogin, loginLocalHandler);
 
-module.exports = localLoginController;
+module.exports = localLoginRouter;
