@@ -7,8 +7,6 @@ $colorBorders: #636060;
 
 // Font Size
 $sizeLinks: 16px;
-$sizeSubTitle: 1.5em;
-
 // Animations
 
 // Efecto texto venir desde la izquierda
@@ -25,6 +23,6 @@ $sizeSubTitle: 1.5em;
 
 // Mixins
 @mixin lineaSeparadora {
-  border-top: 3px solid $colorMain;
-  margin: 15px 580px;
+  border-top: 0.3vw solid $colorMain;
+  margin: 0.1vw 37vw;
 }

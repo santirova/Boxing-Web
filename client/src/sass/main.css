@@ -117,95 +117,157 @@ button {
 
 .home__container {
   background-image: url(../../../src/assets/fondo-box.jpg);
-  background-size: cover;
-  background-position-y: 50%;
-  padding: 8.1em 5em;
+  background-size: 110%;
+  background-position-y: -11vw;
+  padding: 12vw 5vw;
 }
-.home__container h1 {
+.home__container .title__container {
+  font-family: "Teko", sans-serif;
+}
+.home__container .title__container h1 {
   display: flex;
   flex-direction: column;
+  line-height: 6vw;
 }
-.home__container h1 .s1 {
-  font-size: 2em;
+.home__container .title__container h1 .s1 {
+  font-size: 5.5vw;
+  text-transform: uppercase;
   color: #da1d25;
   animation: fadeInLeft 0.7s forwards;
 }
-.home__container h1 .s2 {
-  font-size: 2.3em;
+.home__container .title__container h1 .s2 {
+  font-size: 6.8vw;
+  text-transform: uppercase;
   color: #f3eeee;
   transform: translateX(-50%);
-  animation: fadeInLeft 0.7s forwards;
+  animation: fadeInLeft 0.8s forwards;
   animation-delay: 0.5s;
 }
-.home__container h1 .s2 .s3 {
-  text-decoration: underline;
-  text-decoration-color: #da1d25;
-  text-decoration-thickness: 5px;
-  text-underline-offset: 20px;
-}
-.home__container p {
+.home__container .title__container p {
+  font-family: "Poppins", sans-serif;
   color: #f3eeee;
-  font-size: 1.3em;
-  line-height: 0.3em;
-  margin-top: 30px;
+  font-size: 1.3vw;
+  line-height: 1.2vw;
+  margin-top: 1vw;
   transform: translateX(-100%);
   animation: fadeInLeft 0.7s forwards;
   animation-delay: 0.9s;
 }
-.home__container .btn-home {
+.home__container .title__container .btn-home {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2vw;
   background-color: #da1d25;
-  padding: 12px 35px;
   color: white;
-  margin-right: 20px;
-  margin-top: 30px;
+  padding: 1vw 2.5vw;
+  margin-top: 2.5vw;
 }
-.home__container .btn-home:hover {
+.home__container .title__container .btn-home:hover {
   background-color: #f3eeee;
   color: #da1d25;
+  transform: translateY(-8px);
+  transition: transform 0.3s ease;
+}
+.home__container .title__container .btn-home:not(:hover) {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
 }
 
 .subhome__container {
-  background-color: #111111;
-  padding: 30px;
+  background-color: black;
+  padding: 2vw 8vw;
 }
-.subhome__container h2 {
+.subhome__container .second__container {
   text-align: center;
-  color: #f3eeee;
-  font-size: 1.5em;
+}
+.subhome__container .second__container h2 {
+  font-family: "Teko", sans-serif;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  color: #f3eeee;
+  font-size: 2.8vw;
+  font-weight: 600;
 }
-.subhome__container .linea {
-  border-top: 3px solid #da1d25;
-  margin: 15px 580px;
+.subhome__container .second__container .linea {
+  border-top: 0.3vw solid #da1d25;
+  margin: 0.1vw 37vw;
 }
-.subhome__container .img__container {
+.subhome__container .second__container .img__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 1.5vw;
 }
-.subhome__container .img__container img {
+.subhome__container .second__container .img__container img {
   width: 100%;
 }
-.subhome__container .img__container .img-subhome {
-  text-align: center;
+.subhome__container .second__container .img__container .img-subhome {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2vw;
 }
-.subhome__container .img__container .img-subhome p {
+.subhome__container .second__container .img__container .img-subhome p {
   position: relative;
-  width: 170px;
-  height: 50px;
-  padding: 20px;
-  border: 2px solid #636060;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  width: 13.5vw;
+  height: 2.5vw;
+  padding: 3vw;
+  border: 0.1vw solid #636060;
   background: #000000;
   color: #7e7b7b;
-  font-size: 15px;
+  font-size: 1.1vw;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin-top: -40px;
   display: flex;
   align-items: center;
+}
+
+.benefits__container {
+  background-color: #080808;
+  padding: 2vw 1vw;
+  text-align: center;
+}
+.benefits__container .third__title h3 {
+  font-family: "Teko", sans-serif;
+  text-transform: uppercase;
+  color: #f3eeee;
+  font-size: 2.8vw;
+  font-weight: 600;
+}
+.benefits__container .third__title .linea {
+  border-top: 0.3vw solid #da1d25;
+  margin: 0.1vw 46vw;
+}
+.benefits__container .third__title .benefits-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2vw;
+  padding: 2vw 5vw;
+}
+.benefits__container .third__title .benefits-container .benefit {
+  border: 0.1vw solid gray;
+  padding: 2.5vw 1vw;
+}
+.benefits__container .third__title .benefits-container .benefit:hover {
+  transform: scale(1.1);
+  transition: transform 0.8s ease;
+  background-color: #0f0f0f;
+}
+.benefits__container .third__title .benefits-container .benefit h4 {
+  font-family: "Teko", sans-serif;
+  font-size: 1.8vw;
+  font-weight: 500;
+  color: #9e9d9d;
+  margin-top: 1vw;
+}
+.benefits__container .third__title .benefits-container .benefit h4:hover {
+  color: #da1d25;
+}
+.benefits__container .third__title .benefits-container .benefit p {
+  color: #7e7b7b;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1vw;
+  margin-top: 1vw;
 }
 
 /* Responsive mobile */
