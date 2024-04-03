@@ -1,10 +1,10 @@
 // paymentsHandlers.js
 const {
   getAllPaymentsController,
-} = require("../controllers/paymentsController/getAllPaymentsController");
+} = require("../controllers/paymentsController/getAllPaymentsController.js");
 const {
   getPaymentsById,
-} = require("../controllers/paymentsController/getPaymentsById.js");
+} = require("../controllers/paymentsController/getPaimentsById.js");
 
 const getPaymentsHandlers = async (req, res) => {
   try {
