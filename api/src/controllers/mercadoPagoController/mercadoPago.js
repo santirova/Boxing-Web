@@ -7,15 +7,16 @@ mercadopago.configure({
 });
 
 const mercadoPago = async (req, res) => {
+  const product = req.body;
+
   try {
     const preference = {
       items: [
         {
-          title: "Compu",
-          picture_url: "http://sdasdasd",
-          unit_price: 200,
+          title: product.name,
+          unit_price: product.price,
           currency_id: "ARS",
-          description: "fdfsdfsdf",
+          description: product.description,
           quantity: 1,
         },
       ],
@@ -30,7 +31,7 @@ const mercadoPago = async (req, res) => {
     console.log(response);
     res.status(200).send(response);
   } catch (error) {
-    res.status(500).send({ error: error.message });
+    res.status(500).json(error.message);
   }
 };
 

@@ -1,18 +1,21 @@
 const paymentsData = [
   {
     name: "Por Día",
-    price: 0,
+    price: 50,
     description: "La descripcion",
+    quantity: 1,
   },
   {
     name: "Por Semana",
-    price: 0,
+    price: 100,
     description: "La descripcion",
+    quantity: 1,
   },
   {
     name: "Por Mes",
-    price: 0,
+    price: 1000,
     description: "La descripcion",
+    quantity: 1,
   },
 ];
 
