@@ -1,0 +1,14 @@
+.breadcrumb {
+  ol {
+    display: flex;
+    gap: 0.7vw;
+    background-color: red;
+    padding: 1vw;
+    .link-home a {
+      color: white;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}

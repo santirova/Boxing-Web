@@ -1,3 +1,5 @@
+import Breadcrumb from "../utils/Breadcrumb";
+
 const Contact = () => {
   return (
     <>
@@ -11,9 +13,7 @@ const Contact = () => {
             deseo de alcanzar nuevos límites.
           </p>
           <div className="subtitle__section">
-            <h6>
-              Inicio / <span>Contacto</span>
-            </h6>
+            <Breadcrumb />
           </div>
         </div>
       </section>

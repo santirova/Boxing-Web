@@ -1,24 +1,27 @@
-footer {
+.footer {
   background-color: black;
   color: $colorTextTwo;
-  padding: 20px;
+  padding: 1.8vw 6vw;
+  font-family: "Poppins", sans-serif;
   .container__footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     .data__footer {
       display: flex;
       flex-direction: column;
-      margin-left: 30px;
       gap: 10px;
       h4 {
-        font-size: 1.3em;
-        margin-top: 10px;
+        font-family: "Teko", sans-serif;
+        font-size: 2vw;
+        font-weight: 500;
+        margin-top: 1vw;
         color: #da1d25;
         text-transform: uppercase;
       }
       p {
-        margin-top: 4px;
-        font-size: 1em;
+        font-size: 1.2vw;
+        line-height: 1vw;
       }
     }
     .nav__footer {
@@ -27,11 +30,14 @@ footer {
       .footer__links {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 0.5vw;
         .links__footer {
           text-decoration: none;
-          font-size: 1.2em;
+          font-size: 1.2vw;
           color: rgba(255, 255, 255, 0.5);
+          &:hover {
+            color: #da1d25;
+          }
         }
       }
     }
@@ -40,19 +46,23 @@ footer {
       flex-direction: column;
       justify-content: center;
       h4 {
-        font-size: 1.3em;
-        margin-top: 10px;
+        font-family: "Teko", sans-serif;
+        font-size: 2vw;
+        font-weight: 500;
         color: #da1d25;
         text-transform: uppercase;
       }
       .icons__redes {
         text-align: center;
-        margin-top: 10px;
+        margin-top: 0.3vw;
         color: #da1d25;
         a {
-          margin: 0 8px;
+          margin: 0 0.8vw;
           color: $colorTextTwo;
-          font-size: 1.5em;
+          font-size: 1.8vw;
+          &:hover {
+            color: #da1d25;
+          }
         }
       }
     }
@@ -60,38 +70,44 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: start;
-      gap: 5px;
-      margin-right: 30px;
       h5 {
-        font-size: 1.1em;
-        margin-top: 10px;
+        font-family: "Teko", sans-serif;
+        font-size: 2vw;
+        font-weight: 500;
         text-transform: uppercase;
+      }
+      p {
+        font-size: 1.2vw;
       }
       input {
         background-color: rgb(44, 44, 44);
-        padding: 8px 30px;
-        margin-top: 5px;
+        padding: 0.8vw 3.5vw;
+        margin-top: 1.3vw;
         color: rgb(139, 139, 139);
         font-weight: bold;
-        margin-right: 20px;
         border: none;
       }
-
       button {
         background-color: #da1d25;
-        padding: 8px 30px;
+        padding: 0.7vw 2.5vw;
         color: white;
-        font-weight: bold;
-        margin-right: 20px;
-        margin-bottom: 20px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        margin-top: 0.5vw;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
       }
     }
   }
   .separador {
-    border-top: 1px solid rgb(139, 139, 139);
-    margin: 15px 150px;
+    border-top: 0.1vw solid rgb(139, 139, 139);
+    margin-top: 2vw;
   }
   .copy__name {
     text-align: center;
+    font-size: 1.1vw;
+    margin-top: 1.5vw;
   }
 }

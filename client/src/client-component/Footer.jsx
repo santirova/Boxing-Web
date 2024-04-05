@@ -30,11 +30,11 @@ const Footer = () => {
     <footer className="footer">
       <section className="container__footer">
         <div className="data__footer">
-          <p>011-xxxx-xxxx</p>
+          <p>011-6488-4537</p>
           <p>diegonoriega@gmail.com</p>
           <h4>Dirección</h4>
-          <p>Arturo Guastavino 3750.</p>
-          <p>Castelar sur, Bs As (CP:1712)</p>
+          <p>Arturo Guastavino 3750,</p>
+          <p>Castelar Sur, Bs As (CP: 1712)</p>
         </div>
         <nav className="nav__footer">
           <ul className="footer__links">

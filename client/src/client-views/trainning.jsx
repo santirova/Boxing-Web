@@ -1,3 +1,5 @@
+import Breadcrumb from "../utils/Breadcrumb";
+
 const Trainning = () => {
   return (
     <>
@@ -11,9 +13,7 @@ const Trainning = () => {
             deseo de alcanzar nuevos límites.
           </p>
           <div className="subtitle__section">
-            <h6>
-              Inicio / <span>Entrenamiento</span>
-            </h6>
+            <Breadcrumb />
           </div>
         </div>
       </section>
