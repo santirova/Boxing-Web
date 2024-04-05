@@ -3,8 +3,14 @@
   background-size: 110%;
   background-position-y: -11vw;
   padding: 12vw 5vw;
+  @media (max-width: 600px) {
+    background-position-y: 0vw;
+  }
   .title__container {
     font-family: "Teko", sans-serif;
+    @media (max-width: 600px) {
+      padding: 15vw 0;
+    }
     h1 {
       display: flex;
       flex-direction: column;

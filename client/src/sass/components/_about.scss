@@ -1,0 +1,27 @@
+.about__container {
+  background-color: black;
+  padding: 5vw;
+  .firts__about {
+    display: flex;
+    padding: 2vw;
+    gap: 5vw;
+    img {
+      width: 30%;
+    }
+    .title-firts-about {
+      h2 {
+        font-family: "Teko", sans-serif;
+        color: white;
+        font-size: 3.5vw;
+        text-transform: uppercase;
+      }
+      p {
+        font-family: "Poppins", sans-serif;
+        color: gray;
+      }
+    }
+    .skills-entrenamiento {
+      color: white;
+    }
+  }
+}

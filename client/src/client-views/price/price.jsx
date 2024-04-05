@@ -3,7 +3,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getPayments } from "../../redux/paymentsActions";
 import ApiCardContainer from "../../client-component/cardContainer/apiCardContainer";
-import "./Price.css";
+import Breadcrumb from "../../utils/Breadcrumb";
 
 const Price = () => {
   const dispatch = useDispatch();
@@ -20,13 +20,11 @@ const Price = () => {
       <div className="title__content">
         <h1>Precios</h1>
         <p>
-          Bienvenido a Boxeo Noriega, donde la pasión por el boxeo se encuentra
-          con el compromiso hacia el rendimiento y la superación personal.
+          Selecciona el plan que mejor se adapte a tus necesidades y
+          presupuesto.
         </p>
         <div className="subtitle__section">
-          <h6>
-            Inicio / <span>Precios</span>
-          </h6>
+          <Breadcrumb />
         </div>
       </div>
       <div className="card__container">

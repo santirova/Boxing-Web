@@ -1,5 +1,4 @@
 import Card from "../cards/Cards";
-import "./apiCardContainer.css";
 
 const ApiCardContainer = () => {
   return (

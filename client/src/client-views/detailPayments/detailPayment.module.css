@@ -7,10 +7,3 @@
   cursor: pointer;
   border: 3px groove #da1d25;
 }
-
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}

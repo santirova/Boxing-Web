@@ -1,20 +1,23 @@
 const paymentsData = [
   {
-    name: "Por Día",
-    price: 50,
-    description: "La descripcion",
+    name: "Diario",
+    price: 1250,
+    description:
+      "Ejercicio cardiovascular. Ejercicios aeróbicos. Clases en grupo. Rutina de ejercicios.",
     quantity: 1,
   },
   {
-    name: "Por Semana",
-    price: 100,
-    description: "La descripcion",
+    name: "Semanal",
+    price: 3000,
+    description:
+      "Ejercicio cardiovascular. Ejercicios aeróbicos. Clases en grupo. Rutina de ejercicios.",
     quantity: 1,
   },
   {
-    name: "Por Mes",
-    price: 1000,
-    description: "La descripcion",
+    name: "Mensual",
+    price: 8000,
+    description:
+      "Ejercicio cardiovascular. Ejercicios aeróbicos. Clases en grupo. Entrenamiento personalizado.",
     quantity: 1,
   },
 ];
