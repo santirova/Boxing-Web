@@ -2,20 +2,24 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchDetailPayments } from "../../redux/paymentsActions.js";
+import { useAuth0 } from "@auth0/auth0-react";
 import style from "./detailPayment.module.css";
 import axios from "axios";
 
 const DetailPayments = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
   const paymentsDetail = useSelector(
     (state) => state.paymentsReducer.paymentsDetail
   );
 
   const pay = async (paymentId, unitPrice) => {
-    console.log("Unit price:", unitPrice);
     try {
+      if (!isAuthenticated) {
+        loginWithRedirect();
+        return;
+      }
       const response = await axios.post("/mercadoPago", {
         paymentId,
         price: unitPrice,

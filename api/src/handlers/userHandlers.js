@@ -1,14 +1,4 @@
-const getUserController = require("../controllers/auth0Controller/getUserController.js");
 const postUserController = require("../controllers/auth0Controller/postUserController.js");
-
-const getUserHandler = async (req, res) => {
-  try {
-    const allUser = await getUserController();
-    res.status(200).send(allUser);
-  } catch (error) {
-    res.status(400).send({ error: error.message });
-  }
-};
 
 const postUserHandler = async (req, res) => {
   const { name, email, type, status } = req.body;
@@ -21,4 +11,4 @@ const postUserHandler = async (req, res) => {
   }
 };
 
-module.exports = { getUserHandler, postUserHandler };
+module.exports = { postUserHandler };

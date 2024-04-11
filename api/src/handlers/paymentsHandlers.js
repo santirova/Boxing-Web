@@ -1,19 +1,12 @@
 // paymentsHandlers.js
-const {
-  getAllPaymentsController,
-} = require("../controllers/paymentsController/getAllPaymentsController.js");
+
 const {
   getPaymentsById,
 } = require("../controllers/paymentsController/getPaimentsById.js");
 
-const getPaymentsHandlers = async (req, res) => {
-  try {
-    const allPayments = await getAllPaymentsController();
-    res.status(200).send(allPayments);
-  } catch (error) {
-    res.status(400).send({ error: error.message });
-  }
-};
+const {
+  getAllPaymentsController,
+} = require("../controllers/paymentsController/getAllPaymentsController.js");
 
 const getPaymentsByIdHandlers = async (req, res) => {
   const { id } = req.params;
@@ -35,7 +28,13 @@ const getPaymentsByIdHandlers = async (req, res) => {
   }
 };
 
-module.exports = {
-  getPaymentsHandlers,
-  getPaymentsByIdHandlers,
+const getAllPaymentsHandlers = async (req, res) => {
+  try {
+    const allPayments = await getAllPaymentsController();
+    res.status(200).send(allPayments);
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
 };
+
+module.exports = { getPaymentsByIdHandlers, getAllPaymentsHandlers };

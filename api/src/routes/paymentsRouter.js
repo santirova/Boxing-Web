@@ -1,12 +1,12 @@
 // paymentsRouter.js
 const { Router } = require("express");
 const {
-  getPaymentsHandlers,
+  getAllPaymentsHandlers,
   getPaymentsByIdHandlers,
 } = require("../handlers/paymentsHandlers");
-const paymentsRouter = Router();
 
-paymentsRouter.get("/", getPaymentsHandlers);
+const paymentsRouter = Router();
+paymentsRouter.get("/", getAllPaymentsHandlers);
 paymentsRouter.get("/:id", getPaymentsByIdHandlers);
 
 module.exports = paymentsRouter;

@@ -8,8 +8,11 @@ const registerLocalRouter = require("./registerLocalRouter");
 const localLoginRouter = require("./localLoginRouter");
 const mercadoPagoRouter = require("./mercadoPagoRouter");
 const paymentsRouter = require("./paymentsRouter");
+const adminRouter = require("./adminRoutes");
 
 const router = Router();
+
+router.use("/admin", adminRouter);
 
 router.use("/auth0", auth0Router);
 

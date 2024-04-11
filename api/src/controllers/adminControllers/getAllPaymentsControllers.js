@@ -9,4 +9,4 @@ const getAllPaymentsController = async () => {
   }
 };
 
-module.exports = { getAllPaymentsController };
+module.exports = getAllPaymentsController;
