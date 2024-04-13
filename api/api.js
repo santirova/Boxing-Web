@@ -17,7 +17,7 @@ const paymentsData = [
     name: "Mensual",
     price: 8000,
     description:
-      "Ejercicio cardiovascular. Ejercicios aeróbicos. Clases en grupo. Entrenamiento personalizado.",
+      "Ejercicio cardiovascular. Ejercicios aeróbicos. Clases en grupo. Entrenamiento personalizado. Equipamiento adicional.",
     quantity: 1,
   },
 ];

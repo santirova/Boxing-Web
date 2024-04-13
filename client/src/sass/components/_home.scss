@@ -132,9 +132,10 @@
         border: 0.1vw solid gray;
         padding: 2.5vw 1vw;
         &:hover {
-          transform: scale(1.1);
-          transition: transform 0.8s ease;
-          background-color: #0f0f0f;
+          background-color: #000000;
+          h4 {
+            color: $colorMain;
+          }
         }
         h4 {
           font-family: "Teko", sans-serif;
@@ -142,9 +143,6 @@
           font-weight: 500;
           color: #9e9d9d;
           margin-top: 1vw;
-          &:hover {
-            color: $colorMain;
-          }
         }
         p {
           color: $colorTextTwo;

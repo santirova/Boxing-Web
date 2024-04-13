@@ -5,11 +5,21 @@ const ApiCard = () => {
   const allPayments = useSelector((state) => state.paymentsReducer.allPayments);
   console.log("Pagos => ", allPayments);
 
+  // Crear un nuevo array con el orden modificado
+  const modifiedOrder = [...allPayments];
+  if (modifiedOrder.length >= 3) {
+    const lastItem = modifiedOrder.pop(); // Eliminar la última tarjeta
+    modifiedOrder.splice(1, 0, lastItem); // Insertar la última tarjeta en la posición 1
+  }
+
   return (
     <div>
       <div className="cards__items">
-        {allPayments.map((item) => (
-          <div key={item.id} className="cards">
+        {modifiedOrder.map((item, index) => (
+          <div
+            key={item.id}
+            className={`cards ${index === 1 ? "second-card" : ""}`}
+          >
             <div>
               <p className="cards-firts">1° clase gratis</p>
               <h2>Pack {item.name}</h2>

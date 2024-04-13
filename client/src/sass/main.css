@@ -258,9 +258,10 @@ button {
   padding: 2.5vw 1vw;
 }
 .benefits__container .third__title .benefits-container .benefit:hover {
-  transform: scale(1.1);
-  transition: transform 0.8s ease;
-  background-color: #0f0f0f;
+  background-color: #000000;
+}
+.benefits__container .third__title .benefits-container .benefit:hover h4 {
+  color: #da1d25;
 }
 .benefits__container .third__title .benefits-container .benefit h4 {
   font-family: "Teko", sans-serif;
@@ -268,9 +269,6 @@ button {
   font-weight: 500;
   color: #9e9d9d;
   margin-top: 1vw;
-}
-.benefits__container .third__title .benefits-container .benefit h4:hover {
-  color: #da1d25;
 }
 .benefits__container .third__title .benefits-container .benefit p {
   color: #7e7b7b;
@@ -331,6 +329,10 @@ button {
 }
 .title__section .subtitle__section {
   display: inline-block;
+}
+.title__section .pl .lineaaa {
+  position: relative;
+  bottom: -7px;
 }
 
 .footer {
@@ -475,7 +477,7 @@ button {
 .cards__items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 3vw;
+  padding: 7vw;
   gap: 3vw;
   justify-content: space-around;
 }
@@ -483,7 +485,6 @@ button {
   display: flex;
   flex-direction: column;
   padding: 2vw;
-  background-color: #0a0a0a;
 }
 .cards__items .cards .cards-firts {
   color: white;
@@ -524,6 +525,10 @@ button {
 .cards__items .cards button:not(:hover) {
   transform: translateY(0);
   transition: transform 0.3s ease;
+}
+.cards__items .second-card {
+  background-color: #0a0a0a;
+  margin-top: -1.5vw;
 }
 
 .mobile-menu {
@@ -616,7 +621,7 @@ button {
 .breadcrumb ol {
   display: flex;
   gap: 0.7vw;
-  background-color: red;
+  background-color: #da1d25;
   padding: 1vw;
 }
 .breadcrumb ol .link-home a {
@@ -624,4 +629,16 @@ button {
 }
 .breadcrumb ol .link-home a:hover {
   color: black;
+}
+
+.price__description {
+  padding: 2vw 15vw;
+  background-color: rgb(8, 8, 8);
+}
+.price__description p {
+  font-size: 1.2vw;
+  color: #959595;
+}
+.price__description p span {
+  color: #da1d25;
 }/*# sourceMappingURL=main.css.map */
