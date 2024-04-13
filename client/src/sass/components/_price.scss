@@ -1,0 +1,11 @@
+.price__description {
+  padding: 2vw 15vw;
+  background-color: rgb(8, 8, 8);
+  p {
+    font-size: 1.2vw;
+    color: #959595;
+    span {
+      color: $colorMain;
+    }
+  }
+}
