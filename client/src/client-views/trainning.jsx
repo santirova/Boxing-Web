@@ -1,20 +1,17 @@
 import Breadcrumb from "../utils/Breadcrumb";
+import TitleComponent from "../components/TitleComponent";
+import data from "../json/titles.json";
 
 const Trainning = () => {
   return (
     <>
       <section className="title__section">
-        <div className="title__content">
-          <h1>Entrenamiento</h1>
-          <p>
-            Bienvenido a Boxeo Noriega, donde la pasión por el boxeo se
-            encuentra con el compromiso hacia el rendimiento y la superación
-            personal. Somos una comunidad unida por el amor al deporte y el
-            deseo de alcanzar nuevos límites.
-          </p>
-          <div className="subtitle__section">
-            <Breadcrumb />
-          </div>
+        <TitleComponent
+          title={data.training.title}
+          description={data.training.description}
+        />
+        <div className="subtitle__section">
+          <Breadcrumb />
         </div>
       </section>
     </>

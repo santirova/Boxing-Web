@@ -1,9 +1,11 @@
 .breadcrumb {
   ol {
     display: flex;
+    justify-content: center;
     gap: 0.7vw;
     background-color: #da1d25;
     padding: 1vw;
+
     .link-home a {
       color: white;
       &:hover {

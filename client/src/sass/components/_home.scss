@@ -3,20 +3,43 @@
   background-size: 110%;
   background-position-y: -11vw;
   padding: 12vw 5vw;
+  position: relative;
   @media (max-width: 600px) {
     background-position-y: 0vw;
+    padding: 10vw 5vw;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    @media (max-width: 600px) {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
   }
   .title__container {
     font-family: "Teko", sans-serif;
-    @media (max-width: 600px) {
-      padding: 15vw 0;
-    }
     h1 {
       display: flex;
       flex-direction: column;
       line-height: 6vw;
+      @media (max-width: 920px) {
+        line-height: 7.7vw;
+        @media (max-width: 600px) {
+          line-height: 12vw;
+        }
+      }
       .s1 {
         font-size: 5.5vw;
+        @media (max-width: 920px) {
+          font-size: 7vw;
+          @media (max-width: 600px) {
+            font-size: 11.5vw;
+          }
+        }
         text-transform: uppercase;
         color: $colorMain;
         animation: fadeInLeft 0.7s forwards;
@@ -28,6 +51,12 @@
         transform: translateX(-50%);
         animation: fadeInLeft 0.8s forwards;
         animation-delay: 0.5s;
+        @media (max-width: 920px) {
+          font-size: 7.7vw;
+          @media (max-width: 600px) {
+            font-size: 12vw;
+          }
+        }
       }
     }
     p {
@@ -39,6 +68,15 @@
       transform: translateX(-100%);
       animation: fadeInLeft 0.7s forwards;
       animation-delay: 0.9s;
+      @media (max-width: 920px) {
+        font-size: 1.7vw;
+        line-height: 2vw;
+        margin-top: 1.3vw;
+        @media (max-width: 600px) {
+          font-size: 3.1vw;
+          line-height: 4vw;
+        }
+      }
     }
     .btn-home {
       font-family: "Poppins", sans-serif;
@@ -47,6 +85,17 @@
       color: white;
       padding: 1vw 2.5vw;
       margin-top: 2.5vw;
+      @media (max-width: 920px) {
+        padding: 1.5vw 3.5vw;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.6vw;
+        margin-top: 3.2vw;
+        @media (max-width: 600px) {
+          font-size: 3.2vw;
+          padding: 2vw 5vw;
+          margin-top: 5vw;
+        }
+      }
       &:hover {
         background-color: $colorTextOne;
         color: $colorMain;
@@ -71,6 +120,13 @@
       color: $colorTextOne;
       font-size: 2.8vw;
       font-weight: 600;
+      @media (max-width: 920px) {
+        font-size: 4vw;
+        @media (max-width: 600px) {
+          font-size: 5.5vw;
+          margin-top: 2vw;
+        }
+      }
     }
     .linea {
       @include lineaSeparadora;
@@ -79,6 +135,25 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5vw;
+      @media (max-width: 920px) {
+        gap: 2.5vw;
+        @media (max-width: 600px) {
+          display: flex;
+          flex-direction: column;
+          padding: 0 5vw;
+        }
+      }
+      @media (max-width: 920px) {
+        grid-template-columns: repeat(2, 1fr);
+        :nth-child(3) {
+          grid-column: 1 / span 2;
+          justify-self: center;
+          width: 48%;
+          @media (max-width: 600px) {
+            width: 100%;
+          }
+        }
+      }
       img {
         width: 100%;
       }
@@ -87,6 +162,9 @@
         flex-direction: column;
         align-items: center;
         margin-top: 2vw;
+        @media (max-width: 920px) {
+          margin-top: 3vw;
+        }
         p {
           position: relative;
           font-family: "Poppins", sans-serif;
@@ -102,6 +180,12 @@
           margin-top: -40px;
           display: flex;
           align-items: center;
+          @media (max-width: 920px) {
+            font-size: 1.6vw;
+            height: 5vw;
+            width: 22vw;
+            padding: 3.5vw;
+          }
         }
       }
     }
@@ -118,6 +202,9 @@
       color: $colorTextOne;
       font-size: 2.8vw;
       font-weight: 600;
+      @media (max-width: 920px) {
+        font-size: 4vw;
+      }
     }
     .linea {
       border-top: 0.3vw solid $colorMain;
@@ -128,9 +215,19 @@
       justify-content: space-around;
       gap: 2vw;
       padding: 2vw 5vw;
+      @media (max-width: 920px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vw;
+        padding: 2vw 16vw;
+        margin-top: 2vw;
+      }
       .benefit {
         border: 0.1vw solid gray;
         padding: 2.5vw 1vw;
+        @media (max-width: 920px) {
+          padding: 4vw 5vw;
+        }
         &:hover {
           background-color: #000000;
           h4 {
@@ -143,6 +240,9 @@
           font-weight: 500;
           color: #9e9d9d;
           margin-top: 1vw;
+          @media (max-width: 920px) {
+            font-size: 2.5vw;
+          }
         }
         p {
           color: $colorTextTwo;
@@ -150,42 +250,11 @@
           font-family: "Poppins", sans-serif;
           font-size: 1.1vw;
           margin-top: 1vw;
+          @media (max-width: 920px) {
+            font-size: 1.6vw;
+          }
         }
       }
-    }
-  }
-}
-
-/* Responsive mobile */
-@media only screen and (min-width: 380px) and (max-width: 500px) {
-  .home__container {
-    background-image: url(../../../src/assets/fondo-box.jpg);
-    background-size: cover;
-    padding: 2em;
-    h1 {
-      .s1 {
-        font-size: 0.6em;
-      }
-      .s2 {
-        font-size: 0.6em;
-        .s3 {
-          text-decoration: underline;
-          text-decoration-color: $colorMain;
-          text-decoration-thickness: 3px;
-          text-underline-offset: 9px;
-        }
-      }
-    }
-    p {
-      font-size: 0.6em;
-      line-height: 0em;
-      margin-top: 20px;
-    }
-    .btn-home {
-      padding: 5px 10px;
-      margin-right: 20px;
-      margin-top: 30px;
-      font-size: 0.5em;
     }
   }
 }

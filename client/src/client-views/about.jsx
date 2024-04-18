@@ -1,37 +1,31 @@
 import aboutImg from "../assets/0000.jpg";
 import Breadcrumb from "../utils/Breadcrumb";
+import TitleComponent from "../components/TitleComponent";
+import data from "../json/titles.json";
 
 const About = () => {
   return (
     <>
       <section className="title__section">
-        <div className="title__content">
-          <h1>Nosotros</h1>
-          <p>
-            Bienvenido a Boxeo Noriega, donde la pasión por el boxeo se
-            encuentra con el compromiso hacia el rendimiento y la superación
-            personal.
-            <p>
-              Somos una comunidad unida por el amor al deporte y el deseo de
-              alcanzar nuevos límites.
-            </p>
-          </p>
-          <div className="subtitle__section">
-            <Breadcrumb />
-          </div>
-          <div className="pl">
-            <svg
-              className="lineaaa"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1440 50"
-            >
-              <path
-                fill="#000000"
-                fillOpacity="1"
-                d="M 0 0 L 1920 60 V 70 H 0 V 0 Z"
-              ></path>
-            </svg>
-          </div>
+        <TitleComponent
+          title={data.about.title}
+          description={data.about.description}
+        />
+        <div className="subtitle__section">
+          <Breadcrumb />
+        </div>
+        <div className="pl">
+          <svg
+            className="lineaaa"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 50"
+          >
+            <path
+              fill="#000000"
+              fillOpacity="1"
+              d="M 0 0 L 1920 60 V 70 H 0 V 0 Z"
+            ></path>
+          </svg>
         </div>
       </section>
       <section className="about__container">
