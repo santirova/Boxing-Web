@@ -33,7 +33,7 @@
       font-family: "Poppins", sans-serif;
       .links {
         color: white;
-        font-size: 0.9rem;
+        font-size: 3.6vw;
         position: relative;
         font-weight: 600;
         cursor: default;
@@ -42,12 +42,11 @@
         }
       }
     }
-    .boton-mobile {
+    .login {
       background-color: $colorMain;
+      padding: 2vw 7vw;
       color: $colorTextOne;
-      width: 30vw;
-      height: 40px;
-      margin: 0 2rem;
+      font-family: "Poppins", sans-serif;
     }
   }
 }

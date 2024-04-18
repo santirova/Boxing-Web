@@ -272,7 +272,7 @@ button {
 }
 @media (max-width: 920px) and (max-width: 600px) {
   .subhome__container .second__container h2 {
-    font-size: 5.5vw;
+    font-size: 6.1vw;
     margin-top: 2vw;
   }
 }
@@ -294,7 +294,7 @@ button {
   .subhome__container .second__container .img__container {
     display: flex;
     flex-direction: column;
-    padding: 0 5vw;
+    padding: 3vw 5vw;
   }
 }
 @media (max-width: 920px) {
@@ -350,6 +350,14 @@ button {
     padding: 3.5vw;
   }
 }
+@media (max-width: 920px) and (max-width: 600px) {
+  .subhome__container .second__container .img__container .img-subhome p {
+    font-size: 3vw;
+    width: 45vw;
+    height: 12vw;
+    padding: 4vw;
+  }
+}
 
 .benefits__container {
   background-color: #080808;
@@ -365,7 +373,12 @@ button {
 }
 @media (max-width: 920px) {
   .benefits__container .third__title h3 {
-    font-size: 4vw;
+    font-size: 6.1vw;
+  }
+}
+@media (max-width: 920px) and (max-width: 600px) {
+  .benefits__container .third__title h3 {
+    padding: 2vw;
   }
 }
 .benefits__container .third__title .linea {
@@ -385,6 +398,13 @@ button {
     gap: 3vw;
     padding: 2vw 16vw;
     margin-top: 2vw;
+  }
+}
+@media (max-width: 920px) and (max-width: 600px) {
+  .benefits__container .third__title .benefits-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2vw 20vw;
+    gap: 5vw;
   }
 }
 .benefits__container .third__title .benefits-container .benefit {
@@ -414,6 +434,12 @@ button {
     font-size: 2.5vw;
   }
 }
+@media (max-width: 920px) and (max-width: 600px) {
+  .benefits__container .third__title .benefits-container .benefit h4 {
+    font-size: 4.5vw;
+    margin-top: 3vw;
+  }
+}
 .benefits__container .third__title .benefits-container .benefit p {
   color: #7e7b7b;
   font-weight: 500;
@@ -424,6 +450,12 @@ button {
 @media (max-width: 920px) {
   .benefits__container .third__title .benefits-container .benefit p {
     font-size: 1.6vw;
+  }
+}
+@media (max-width: 920px) and (max-width: 600px) {
+  .benefits__container .third__title .benefits-container .benefit p {
+    font-size: 3.1vw;
+    margin-top: 3vw;
   }
 }
 
@@ -681,7 +713,7 @@ button {
 }
 .mobile-menu .mobile-menu-container .nav__links .links {
   color: white;
-  font-size: 0.9rem;
+  font-size: 3.6vw;
   position: relative;
   font-weight: 600;
   cursor: default;
@@ -689,12 +721,11 @@ button {
 .mobile-menu .mobile-menu-container .nav__links .links:hover {
   color: #da1d25;
 }
-.mobile-menu .mobile-menu-container .boton-mobile {
+.mobile-menu .mobile-menu-container .login {
   background-color: #da1d25;
+  padding: 2vw 7vw;
   color: #f3eeee;
-  width: 30vw;
-  height: 40px;
-  margin: 0 2rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .mobile-menu.active {
