@@ -9,6 +9,7 @@ const localLoginRouter = require("./localLoginRouter");
 const mercadoPagoRouter = require("./mercadoPagoRouter");
 const paymentsRouter = require("./paymentsRouter");
 const adminRouter = require("./adminRoutes");
+const orderRouter = require("./orderRoutes");
 
 const router = Router();
 
@@ -23,6 +24,8 @@ router.use("/login", localLoginRouter);
 router.use("/mercadoPago", mercadoPagoRouter);
 
 router.use("/payments", paymentsRouter);
+
+router.use("/order", orderRouter);
 
 router.use("/api", async (req, res) => {
   const allPayments = await Payments.findAll();

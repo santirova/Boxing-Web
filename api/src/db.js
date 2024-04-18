@@ -18,9 +18,14 @@ UserFunction(sequelize);
 ItemFunction(sequelize);
 
 const { Payments, Order, User, Item } = sequelize.models;
+User.belongsToMany(Payments, { through: "UserPayments" });
+Payments.belongsToMany(User, { through: "UserPayments" });
 
 User.hasMany(Order);
 Order.belongsTo(User);
+
+Order.hasMany(Item);
+Item.belongsTo(Order);
 
 Payments.hasMany(Item);
 Item.belongsTo(Payments);
