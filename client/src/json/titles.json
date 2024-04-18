@@ -1,0 +1,18 @@
+{
+  "about": {
+    "title": "Nosotros",
+    "description": "Somos una empresa dedicada a..."
+  },
+  "training": {
+    "title": "Entrenamiento",
+    "description": "Ofrecemos una amplia gama de programas de entrenamiento..."
+  },
+  "price": {
+    "title": "Precios",
+    "description": "Consulta nuestros planes y precios..."
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Ponte en contacto con nosotros para cualquier consulta..."
+  }
+}

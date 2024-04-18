@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getPayments } from "../../redux/paymentsActions";
-import ApiCardContainer from "../../client-component/cardContainer/apiCardContainer";
+import Cards from "../../client-component/cards/Cards";
 import Breadcrumb from "../../utils/Breadcrumb";
+import TitleComponent from "../../components/TitleComponent";
+import data from "../../json/titles.json";
 
 const Price = () => {
   const dispatch = useDispatch();
@@ -31,19 +33,18 @@ const Price = () => {
   ];
 
   return (
-    <section className="title__section">
-      <div className="title__content">
-        <h1>Precios</h1>
-        <p>
-          Selecciona el plan que mejor se adapte a tus necesidades y
-          presupuesto.
-        </p>
-        <div className="subtitle__section">
+    <section className="price__container">
+      <div className="price__titles">
+        <TitleComponent
+          title={data.price.title}
+          description={data.price.description}
+        />
+        <div className="breadcrumb__container">
           <Breadcrumb />
         </div>
       </div>
       <div className="card__container">
-        <ApiCardContainer />
+        <Cards />
       </div>
       <div className="price__description">
         {descriptionPrice.map((descripcion, index) => (

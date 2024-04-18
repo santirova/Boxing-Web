@@ -4,15 +4,17 @@
   padding: 7vw;
   gap: 3vw;
   justify-content: space-around;
+  text-align: center;
   .cards {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 2vw;
     .cards-firts {
       color: white;
       font-family: "Poppins", sans-serif;
       font-size: 1vw;
-      padding: 0;
     }
     h2 {
       font-family: "Teko", sans-serif;
