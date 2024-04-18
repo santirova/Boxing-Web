@@ -2,6 +2,11 @@ const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
   sequelize.define("Order", {
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+    },
     total_price: {
       type: DataTypes.FLOAT,
       allowNull: true,
@@ -20,10 +25,6 @@ module.exports = (sequelize) => {
     },
     payment_id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
-    },
-    pickup_date: {
-      type: DataTypes.DATE,
       allowNull: true,
     },
     order_status: {
