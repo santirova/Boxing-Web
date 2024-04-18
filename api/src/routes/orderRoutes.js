@@ -1,7 +1,11 @@
 const express = require("express");
 const orderRouter = express.Router();
-const { postOrderHandler } = require("../handlers/orderHandlers");
+const {
+  postOrderHandler,
+  putOrderHandler,
+} = require("../handlers/orderHandlers");
 
 orderRouter.post("/", postOrderHandler);
+orderRouter.put("/", putOrderHandler);
 
 module.exports = orderRouter;
