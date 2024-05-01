@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const mercadoPagoRouter = Router();
-const mercadoPago = require("../controllers/mercadoPagoController/mercadoPago");
+const { mercadoPagoHandler } = require("../handlers/mercadoPagoHanlders");
 
-mercadoPagoRouter.post("/", mercadoPago);
+mercadoPagoRouter.post("/create-preference/:userEmail", mercadoPagoHandler);
 
 module.exports = mercadoPagoRouter;

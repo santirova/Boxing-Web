@@ -6,33 +6,31 @@ mercadopago.configure({
   access_token: ACCESS_TOKEN,
 });
 
-const mercadoPago = async (req, res) => {
-  const product = req.body;
+const mercadoPago = (pendingOrderId, itemsBody) => {
+  let preference = {
+    metadata: { relatedOrderId: pendingOrderId },
+    items: itemsBody,
 
-  try {
-    const preference = {
-      items: [
-        {
-          title: product.name,
-          unit_price: product.price,
-          currency_id: "ARS",
-          description: product.description,
-          quantity: 1,
-        },
-      ],
-      back_urls: {
-        success: "http://localhost:5173/Precios",
-        pending: "http://localhost:5173/Precios",
-        failure: "http://localhost:5173/Precios",
-      },
-      auto_return: "approved",
-    };
-    const response = await mercadopago.preferences.create(preference);
-    console.log(response);
-    res.status(200).send(response);
-  } catch (error) {
-    res.status(500).json(error.message);
-  }
+    back_urls: {
+      success: "https://viandaexpress.vercel.app/payment",
+      failure: "https://viandaexpress.vercel.app/payment",
+      pending: "https://viandaexpress.vercel.app/payment",
+    },
+    auto_return: "approved",
+  };
+
+  const preferenceId = mercadopago.preferences
+    .create(preference)
+    .then(function (response) {
+      return {
+        id: response.body.id,
+      };
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+  return preferenceId;
 };
 
 module.exports = mercadoPago;
