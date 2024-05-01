@@ -9,7 +9,7 @@ import axios from "axios";
 const DetailPayments = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const { isAuthenticated, loginWithRedirect } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, user } = useAuth0();
   const paymentsDetail = useSelector(
     (state) => state.paymentsReducer.paymentsDetail
   );
@@ -20,10 +20,13 @@ const DetailPayments = () => {
         loginWithRedirect();
         return;
       }
-      const response = await axios.post("/mercadoPago", {
-        paymentId,
-        price: unitPrice,
-      });
+      const response = axios.post(
+        `/mercadoPago/create-preference:${user?.email}`,
+        {
+          paymentId,
+          price: unitPrice,
+        }
+      );
       console.log("data response =>", response.data);
 
       window.location.href = response.data.body.init_point;

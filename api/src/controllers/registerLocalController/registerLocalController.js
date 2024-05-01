@@ -25,6 +25,7 @@ const registerLocalController = async (name, email, status, plainPassword) => {
     status,
     password: encryptedPassword,
   });
+  console.log("Nuevo usuario creado:", newUser);
   newUser.set("password", undefined, { srtrict: false });
 
   const data = {

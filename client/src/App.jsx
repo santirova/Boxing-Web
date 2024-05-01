@@ -8,6 +8,8 @@ import Footer from "./client-component/Footer";
 import Trainning from "./client-views/trainning";
 import Contact from "./client-views/contact";
 import DetailPayments from "./client-views/detailPayments/detailPayments";
+import RegisterLocal from "./client-component/RegisterLocal";
+import LocalLogin from "./client-component/LocalLogin";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/Precios" element={<Price />} />
           <Route path="/Contacto" element={<Contact />} />
           <Route path="/Detalle/:id" element={<DetailPayments />} />
+          <Route path="/RegistroLocal" element={<RegisterLocal />} />
+          <Route path="/LoginLocal" element={<LocalLogin />} />
         </Routes>
         <Footer />
       </BrowserRouter>
