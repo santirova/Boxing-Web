@@ -10,33 +10,28 @@ const app = express();
 // MIDDLEWARES
 app.use(morgan("dev"));
 app.use(express.json());
-
 // MIDDLEWARE: CORS CONFIGURATION
 app.use(cors());
-app.options("*", cors()); // Habilita las solicitudes OPTIONS para CORS
 
-// MIDDLEWARE PARA CONFIGURAR LOS HEADERS CORS
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, DELETE"
-  );
-  res.setHeader(
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    "Origin, X-Requested-With, Content-Type, Accept"
   );
-  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   next();
 });
 
-// MIDDLEWARE PARA LAS RUTAS
+// MIDDLEWARE TO THE ROUTER
 app.use("/", router);
 
 // ERROR HANDLING MIDDLEWARE
 app.use((err, req, res, next) => {
+  /* ?? */
   const status = err.status || 500;
-  const message = err.message || "Internal Server Error";
+  const message = err.message || err;
   console.error(err);
   res.status(status).send(message);
 });
