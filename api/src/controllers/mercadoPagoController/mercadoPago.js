@@ -6,7 +6,7 @@ mercadopago.configure({
   access_token: ACCESS_TOKEN,
 });
 
-const mercadoPago = (pendingOrderId, itemsBody) => {
+const mercadoPago = async (pendingOrderId, itemsBody) => {
   let preference = {
     metadata: { relatedOrderId: pendingOrderId },
     items: itemsBody,
@@ -19,18 +19,15 @@ const mercadoPago = (pendingOrderId, itemsBody) => {
     auto_return: "approved",
   };
 
-  const preferenceId = mercadopago.preferences
-    .create(preference)
-    .then(function (response) {
-      return {
-        id: response.body.id,
-      };
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-
-  return preferenceId;
+  try {
+    const response = await mercadopago.preferences.create(preference);
+    return {
+      id: response.body.id,
+    };
+  } catch (error) {
+    console.log(error);
+    throw new Error("Error creating MercadoPago preference");
+  }
 };
 
 module.exports = mercadoPago;
