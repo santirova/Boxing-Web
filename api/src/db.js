@@ -4,12 +4,16 @@ const PaymentsFunction = require("./models/payments.js");
 const OrderFunction = require("./models/order.js");
 const UserFunction = require("./models/user.js");
 const ItemFunction = require("./models/item.js");
+const pg = require("pg");
 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_PORT } = process.env;
 
 const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,
-  { logging: false }
+  {
+    logging: false,
+    dialectModule: pg,
+  }
 );
 
 PaymentsFunction(sequelize);
