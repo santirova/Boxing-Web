@@ -1,9 +1,10 @@
 const {
-  mercadopago,
-} = require("../controllers/mercadoPagoController/mercadopago.js");
+  mercadoPago,
+} = require("../controllers/mercadoPagoController/mercadopago");
 const {
   getPendingOrderByUserEmailController,
 } = require("../controllers/orderController/getPendingOrderByUserEmailController");
+
 const mercadoPagoHandler = async (req, res) => {
   try {
     const { userEmail } = req.params;
@@ -18,7 +19,7 @@ const mercadoPagoHandler = async (req, res) => {
       userEmail
     );
 
-    const preferenceId = await mercadopago(pendingOrderId, itemsBody);
+    const preferenceId = await mercadoPago(pendingOrderId, itemsBody);
 
     res.status(200).json(preferenceId);
   } catch (error) {
