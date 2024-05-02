@@ -6,7 +6,7 @@ const { paymentsData } = require("../../api");
 const auth0Router = require("./auth0Router");
 const registerLocalRouter = require("./registerLocalRouter");
 const localLoginRouter = require("./localLoginRouter");
-const mercadoPagoRouter = require("./mercadoPagoRouter.js");
+// const mercadoPagoRouter = require("./mercadoPagoRouter.js");
 const paymentsRouter = require("./paymentsRouter");
 const adminRouter = require("./adminRoutes");
 const orderRouter = require("./orderRoutes");
@@ -21,7 +21,7 @@ router.use("/register", registerLocalRouter);
 
 router.use("/login", localLoginRouter);
 
-router.use("/mercadoPago", mercadoPagoRouter);
+// router.use("/mercadoPago", mercadoPagoRouter);
 
 router.use("/payments", paymentsRouter);
 
