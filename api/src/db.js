@@ -6,7 +6,7 @@ const UserFunction = require("./models/user.js");
 const ItemFunction = require("./models/item.js");
 const pg = require("pg");
 
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_PORT, DB_URL } = process.env;
+const { DB_URL } = process.env;
 
 const sequelize = new Sequelize(DB_URL, {
   logging: false,
